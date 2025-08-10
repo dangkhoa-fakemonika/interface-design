@@ -1,5 +1,6 @@
 import {Popover} from "radix-ui";
 import {TokensIcon} from "@radix-ui/react-icons";
+import Sidebar from "@/components/SideBar/Sidebar.jsx";
 
 function SideBarPopover(){
     return (
@@ -9,7 +10,7 @@ function SideBarPopover(){
             </Popover.Trigger>
             <Popover.Portal>
                 <Popover.Content className={"bg-background h-screen w-[320px]"} sideOffset={8}>
-
+                    <Sidebar/>
                 </Popover.Content>
             </Popover.Portal>
         </Popover.Root>
