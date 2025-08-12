@@ -9,7 +9,7 @@ function FeedCarouselItem(){
                 <img
                     src={"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1973530/header.jpg?t=1747619569"}
                     alt={"something"}
-                    className={"w-2/3 aspect-video"}
+                    className={"w-2/3 aspect-video object-cover"}
                 />
                 <div className={"w-1/3 flex flex-col gap-2"}>
                     <img

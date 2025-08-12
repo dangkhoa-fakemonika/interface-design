@@ -1,10 +1,23 @@
-import {MagnifyingGlassIcon} from "@radix-ui/react-icons";
+import {useMemo, useState} from "react";
+import {FaSearch} from "react-icons/fa";
+import {useLocation} from "react-router";
 
-function HeaderSearchBar(){
+function HeaderSearchBar(props){
+    const [value, setValue] = useState("");
+    const {openSearch, setSearchValue} = props;
+
+    const location = useLocation();
+
+    useMemo(() => {
+        setSearchValue(value);
+    }, [value])
+
+    if (location.pathname === "/search-filters") return (<div/>);
+
     return (
-        <label className={"flex flex-row gap-2 group focus-within:border-background-pop border-2 border-background-light p-2 transition-colors duration-300 w-full"}>
-            <MagnifyingGlassIcon width={"24"} height={"24"} className={"text-background-pop opacity-20 group-focus-within:opacity-100 transition-opacity duration-300"}/>
-            <input type={"text"} className={"outline-none text-lg"} placeholder={"Search a game..."}/>
+        <label className={"flex flex-row gap-2 group focus-within:border-background-pop hover:border-background-pop border-2 border-background-light p-2 transition-colors duration-300 w-full"}>
+            <FaSearch size={24} className={"text-background-pop opacity-20 group-focus-within:opacity-100 group-hover:opacity-100 transition-opacity duration-300"}/>
+            <input type={"text"} className={"outline-none text-lg"} placeholder={"Search a game..."} onFocus={openSearch} value={value} onChange={(e) => {setValue(e.target.value)}}/>
         </label>
     )
 }

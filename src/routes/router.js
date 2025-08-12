@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router";
 import MainLayout from "@/layouts/MainLayout.jsx";
 import MainPage from "@/pages/MainPage/MainPage.jsx";
+import ChatbotPage from "@/pages/ChatbotPage/ChatbotPage.jsx";
+import SearchAndFilter from "@/pages/SearchAndFilter/SearchAndFilter.jsx";
 
 const router = createBrowserRouter([
     {
@@ -17,15 +19,15 @@ const router = createBrowserRouter([
             },
             {
                 path : "/ai",
-                // Component : ChatBot
+                Component : ChatbotPage
             },
             {
                 path : "/search",
                 // Component : Search
             },
             {
-                path : "/filters",
-                // Component : Filters
+                path : "/search-filters",
+                Component : SearchAndFilter
             }
         ]
     }

@@ -1,8 +1,10 @@
 function Tags(props){
+    let {text, variant = "base"} = props;
+
     return (
-        <div className={"bg-main-accent w-fit h-fit text-center"}>
+        <div className={"w-fit h-fit text-center " + (variant === "base" ? "bg-main-accent" : variant === "disabled" ? "bg-gray-300" : "bg-background-contrast")}>
             <div className={"text-black opacity-60 mx-2 my-1"}>
-                {props.text}
+                {text}
             </div>
         </div>
     )
