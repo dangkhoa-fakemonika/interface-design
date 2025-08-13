@@ -14,9 +14,11 @@ import PerformanceOptions from "@/pages/SingleGamePage/components/Performance/Pe
 import ChartSpan from "@/pages/SingleGamePage/components/Performance/ChartSpan.jsx";
 import {useState} from "react";
 import {FaChartBar, FaChartLine} from "react-icons/fa";
+import {useNavigate} from "react-router";
 
 function Performance() {
     const [chartType, setChartType] = useState(false);
+    const navigate = useNavigate();
 
     const data = [
         {
@@ -57,7 +59,7 @@ function Performance() {
         <div className={"w-full h-full flex flex-row gap-2"}>
             <div className={"h-2/3 flex-1 flex flex-col w-1/2 gap-4 items-center"}>
                 <div className={"w-full flex flex-row justify-around"}>
-                    <button type={"button"} className={"bg-background-pop py-2 px-4 hover:bg-main-accent transition-colors duration-300"}>
+                    <button type={"button"} className={"bg-background-pop py-2 px-4 hover:bg-main-accent transition-colors duration-300"} onClick={() => navigate("/compare-games")}>
                         Compare with another game
                     </button>
                     <button type={"button"} className={"bg-background-pop py-2 px-4 hover:bg-main-accent transition-colors duration-300"}>

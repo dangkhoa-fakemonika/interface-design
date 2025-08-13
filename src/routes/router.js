@@ -4,6 +4,7 @@ import MainPage from "@/pages/MainPage/MainPage.jsx";
 import ChatbotPage from "@/pages/ChatbotPage/ChatbotPage.jsx";
 import SearchAndFilter from "@/pages/SearchAndFilter/SearchAndFilter.jsx";
 import SingleGamePage from "@/pages/SingleGamePage/SingleGamePage.jsx";
+import CompareGames from "@/pages/CompareGames/CompareGames.jsx";
 
 const router = createBrowserRouter([
     {
@@ -23,8 +24,8 @@ const router = createBrowserRouter([
                 Component : ChatbotPage
             },
             {
-                path : "/search",
-                // Component : Search
+                path : "/compare-games",
+                Component : CompareGames
             },
             {
                 path : "/search-filters",
