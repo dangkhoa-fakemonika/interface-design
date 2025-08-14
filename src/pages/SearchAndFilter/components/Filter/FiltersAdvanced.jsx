@@ -17,7 +17,7 @@ function FiltersAdvanced() {
                 <div className={"w-screen h-full grow flex flex-row"}>
                     <div className={"w-1/6 h-full gap-2 flex flex-col gap-2 box-border border border-white p-2"}>
                         <div className={"w-full flex flex-row justify-center gap-2 items-center"}>
-                            <div className={"font-xl"}>Price</div>
+                            <div className={"text-heading-2"}>Price</div>
                             <IoClose size={24}/>
                         </div>
                         <div className={"w-full p-2 opacity-0 cursor-default"}>
@@ -46,7 +46,7 @@ function FiltersAdvanced() {
 
                     <div className={"w-1/6 h-full gap-2 flex flex-col gap-2 box-border border border-white p-2"}>
                         <div className={"w-full flex flex-row justify-center gap-2 items-center"}>
-                            <div className={"font-xl"}>Release</div>
+                            <div className={"text-heading-2"}>Release</div>
                             <IoClose size={24}/>
                         </div>
                         <div className={"w-full p-2 opacity-0 cursor-default"}>
@@ -67,7 +67,7 @@ function FiltersAdvanced() {
 
                     <div className={"w-1/6 h-full gap-2 flex flex-col gap-2 box-border border border-white p-2"}>
                         <div className={"w-full flex flex-row justify-center gap-2 items-center"}>
-                            <div className={"font-xl"}>Tags</div>
+                            <div className={"text-heading-2"}>Tags</div>
                             <IoClose size={24}/>
                         </div>
                         <div className={"w-full flex flex-row justify-around"}>
@@ -96,7 +96,7 @@ function FiltersAdvanced() {
 
                     <div className={"w-1/6 h-full gap-2 flex flex-col gap-2 box-border border border-white p-2"}>
                         <div className={"w-full flex flex-row justify-center gap-2 items-center"}>
-                            <div className={"font-xl"}>Genre</div>
+                            <div className={"text-heading-2"}>Genre</div>
                             <IoClose size={24}/>
                         </div>
                         <div className={"w-full flex flex-row justify-around"}>
@@ -125,7 +125,7 @@ function FiltersAdvanced() {
 
                     <div className={"w-1/6 h-full gap-2 flex flex-col gap-2 box-border border border-white p-2"}>
                         <div className={"w-full flex flex-row justify-center gap-2 items-center"}>
-                            <div className={"font-xl"}>Publishers</div>
+                            <div className={"text-heading-2"}>Publishers</div>
                             <IoClose size={24}/>
                         </div>
                         <div className={"w-full flex flex-row justify-around"}>

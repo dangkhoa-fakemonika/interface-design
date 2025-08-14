@@ -8,6 +8,16 @@
   --color-background-light : #0C0036;
   --color-background-pop : #4C85FF;
   --color-background-contrast : #00EEFF;
+
+  --text-heading-1 : 32px;
+  --text-heading-2 : 24px;
+  --text-heading-3 : 20px;
+  --text-big-title : 28px;
+  --text-small-title : 18px;
+  --text-section-title : 16px;
+  --text-label : 18px;
+  --text-normal-text : 14px;
+  --text-small-text : 12px;
 }
 
 :root {

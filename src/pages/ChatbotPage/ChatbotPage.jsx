@@ -1,5 +1,6 @@
 import {IoClose} from "react-icons/io5";
 import {FaArrowCircleUp} from "react-icons/fa";
+import {RiChatSmileAiLine} from "react-icons/ri";
 
 function ChatbotPage(){
     const frequentlyAsked = [
@@ -30,12 +31,12 @@ function ChatbotPage(){
     return (
         <div className={"w-full h-full flex flex-row"}>
             <div className={"w-1/5 h-full flex flex-col gap-2 items-center py-4"}>
-                <div className={"text-xl"}>
+                <div className={"text-heading-2"}>
                     Frequently Asked
                 </div>
                 {
                     frequentlyAsked.map((category) => (
-                        <div className={"w-full text-center italic p-1 border border-background-pop hover:border-main-accent "}>
+                        <div className={"w-full text-section-title text-center italic p-1 border border-background-pop hover:border-main-accent "}>
                             {category}
                         </div>
                     ))
@@ -44,8 +45,9 @@ function ChatbotPage(){
 
             <div className={"w-4/5 h-full flex flex-col gap-2 px-2 py-4"}>
                 <div className={"w-full h-fit flex flex-row justify-between items-center text-center px-2 py-4 shrink-0"}>
-                    <div className={"text-xl"}>
-                        GameStats Assistant
+                    <div className={"text-heading-2 flex flex-row gap-2 items-center"}>
+                        <div> GameStats Assistant </div>
+                        <RiChatSmileAiLine size={24}/>
                     </div>
                     <IoClose size={32}/>
                 </div>
@@ -53,7 +55,7 @@ function ChatbotPage(){
                     {
                         chatContent.map(({sender, message}) => (
                             <div
-                                className={" " + (sender ? "self-end bg-background-pop py-1 px-2 rounded" : "self-start")}>
+                                className={"text-normal-text " + (sender ? "self-end bg-background-pop py-1 px-2 rounded" : "self-start")}>
                                 {message}
                             </div>
                         ))
@@ -63,7 +65,7 @@ function ChatbotPage(){
                 <div className={"w-full flex flex-row gap-2"}>
                     {
                         recommendation.map((text) => (
-                            <div className={"w-fit px-2 py-1 bg-background-pop text-white rounded cursor-pointer"}>
+                            <div className={"text-normal-text w-fit px-2 py-1 bg-background-pop text-white rounded cursor-pointer"}>
                                 {text}
                             </div>
                         ))
@@ -71,7 +73,7 @@ function ChatbotPage(){
                 </div>
                 <div
                     className={"bg-white flex flex-row text-background w-full min-h-1/12 max-h-1/8 h-fit rounded items-center p-2 shrink-0"}>
-                    <textarea className={"w-full h-full outline-none resize-none"}/>
+                    <textarea className={"w-full h-full outline-none resize-none text-normal-text"}/>
                     <FaArrowCircleUp size={24}/>
                 </div>
             </div>

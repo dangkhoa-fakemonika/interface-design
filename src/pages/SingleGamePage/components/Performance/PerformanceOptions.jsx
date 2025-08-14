@@ -27,7 +27,7 @@ function PerformanceOptions(){
                     <div
                         onClick={() => setSelected(i)}
                         className={"group w-full h-full flex flex-row p-4 gap-4 items-center justify-start items-center bg-gradient-to-l transition-all duration-300 " + (selected === i ? " from-background-light/50 to-background-pop/50 text-main-accent " : " from-background-light/20 to-background-pop/20 hover:text-secondary-accent hover:from-background-light/30 hover:to-background-pop/30") }>
-                        <div>{options[i - 1]}</div>
+                        <div className={"text-normal-text"}>{options[i - 1]}</div>
                         {icons[i - 1]}
                         <FaChevronRight className={"ml-auto " + (selected === i ? " opacity-100" : " opacity-0 group-hover:opacity-40")}/>
                     </div>

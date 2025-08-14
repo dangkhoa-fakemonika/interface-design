@@ -7,8 +7,8 @@ function GameSlot(){
                 className={"w-1/4 aspect-2/3 object-cover object-[7%_50%]"}
             />
             <div className={"relative w-full grow overflow-hidden flex flex-col"}>
-                <div className={"text-2xl"}>Limbus Company</div>
-                <div className={"opacity-60 italic text-xl"}>Project Moon</div>
+                <div className={"text-heading-1"}>Limbus Company</div>
+                <div className={"opacity-60 italic text-heading-3"}>Project Moon</div>
 
                 <button type={"button"} className={"absolute -bottom-20 group-hover:bottom-0 w-full bg-gradient-to-b from-background-contrast/60 to-background-contrast/40 p-2 transition-all duration-150 "}>
                     Select another game

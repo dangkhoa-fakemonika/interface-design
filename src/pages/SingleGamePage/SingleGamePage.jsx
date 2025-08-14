@@ -26,13 +26,16 @@ function SingleGamePage(){
                     </div>
                     <div className={"w-1/2 flex flex-col gap-2"}>
                         <div className={"w-full flex flex-row justify-between"}>
-                            <div className={"text-3xl"}>Limbus Company</div>
+                            <div className={"text-heading-1"}>Limbus Company</div>
                             <FavoriteButton/>
                         </div>
-                        <div className={""}>By ProjectMoon</div>
+                        <div className={"w-full flex flex-row justify-between"}>
+                            <div className={"text-heading-2"}>By ProjectMoon</div>
+                            <div className={"text-heading-2 text-main-accent"}>Free to play</div>
+                        </div>
                         <div className={"flex flex-row gap-4 items-center"}>
                             <RatingStars ratings={4.5} size={24}/>
-                            <div>Very Positive</div>
+                            <div className={"text-heading-2"}>Very Positive</div>
                         </div>
 
                         <div className={"w-full flex flex-row gap-2 mt-auto"}>
@@ -40,7 +43,7 @@ function SingleGamePage(){
                             <Tags text={"Turn-based"}/>
                         </div>
 
-                        <div className={"mt-auto h-1/5"}>
+                        <div className={"mt-auto h-1/8"}>
                             <SteamButton/>
                         </div>
                     </div>
@@ -49,13 +52,13 @@ function SingleGamePage(){
 
             <Tabs.Root defaultValue={"tab-1"} className={"min-h-screen"}>
                 <Tabs.List className={"w-full"}>
-                    <Tabs.Trigger className={"w-1/3 p-4 text-secondary-accent data-[state=active]:text-main-accent hover:bg-gradient-to-t hover:from-background-pop/10 data-[state=active]:bg-gradient-to-t data-[state=active]:!from-background-pop/40 to-white/0 transition-all duration-300"} value={"tab-1"}>
+                    <Tabs.Trigger className={"w-1/3 p-4 text-heading-3 text-secondary-accent data-[state=active]:text-main-accent hover:bg-gradient-to-t hover:from-background-pop/10 data-[state=active]:bg-gradient-to-t data-[state=active]:!from-background-pop/40 to-white/0 transition-all duration-300"} value={"tab-1"}>
                         Tab 1
                     </Tabs.Trigger>
-                    <Tabs.Trigger className={"w-1/3 p-4 text-secondary-accent data-[state=active]:text-main-accent hover:bg-gradient-to-t hover:from-background-pop/10 data-[state=active]:bg-gradient-to-t data-[state=active]:!from-background-pop/40 to-white/0 transition-all duration-300"} value={"tab-2"}>
+                    <Tabs.Trigger className={"w-1/3 p-4 text-heading-3 text-secondary-accent data-[state=active]:text-main-accent hover:bg-gradient-to-t hover:from-background-pop/10 data-[state=active]:bg-gradient-to-t data-[state=active]:!from-background-pop/40 to-white/0 transition-all duration-300"} value={"tab-2"}>
                         Tab 2
                     </Tabs.Trigger>
-                    <Tabs.Trigger className={"w-1/3 p-4 text-secondary-accent data-[state=active]:text-main-accent hover:bg-gradient-to-t hover:from-background-pop/10 data-[state=active]:bg-gradient-to-t data-[state=active]:!from-background-pop/40 to-white/0 transition-all duration-300"} value={"tab-3"}>
+                    <Tabs.Trigger className={"w-1/3 p-4 text-heading-3 text-secondary-accent data-[state=active]:text-main-accent hover:bg-gradient-to-t hover:from-background-pop/10 data-[state=active]:bg-gradient-to-t data-[state=active]:!from-background-pop/40 to-white/0 transition-all duration-300"} value={"tab-3"}>
                         Tab 3
                     </Tabs.Trigger>
 

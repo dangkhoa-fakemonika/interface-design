@@ -78,26 +78,27 @@ function CompareGames() {
     }]
 
     return (
-        <div className={"w-full h-screen pt-8 flex flex-col gap-8 overflow-y-scroll"}>
-            <div className={"w-full flex flex-row h-fit justify-around"}>
+        <div className={"w-full p-8 flex flex-col gap-8 overflow-y-scroll"}>
+            <div className={"w-full text-heading-1"}>Game Comparison</div>
+            <div className={"w-full flex flex-row h-fit justify-between"}>
                 <div className={"w-2/5 h-fit flex flex-col gap-4"}>
                     <GameSlot/>
-                    <div className={"w-full flex flex-row justify-start items-center gap-4"}>
+                    <div className={"w-full flex flex-row justify-start items-center gap-4 text-heading-2"}>
                         {/*<div className={"mr-auto"}>Current Ratings</div>*/}
                         <div className={"opacity-20"}>4.5</div>
                         <RatingStars ratings={4.5} size={24}/>
                     </div>
-                    <div className={"w-full flex flex-row justify-start items-center gap-4"}>
+                    <div className={"w-full flex flex-row justify-start items-center gap-4 text-heading-2"}>
                         {/*<div className={"mr-auto"}>Current Total Revenue</div>*/}
                         <div>8,000,000</div>
                     </div>
-                    <div className={"w-full flex flex-row justify-start items-center gap-4"}>
+                    <div className={"w-full flex flex-row justify-start items-center gap-4 text-heading-2"}>
                         {/*<div className={"mr-auto"}>Current Total Downloads</div>*/}
                         <div>800,000</div>
                     </div>
                 </div>
 
-                <div className={"flex flex-col h-full gap-2 justify-end items-center"}>
+                <div className={"flex flex-col h-full gap-2 justify-end items-center text-heading-2"}>
                     <div
                         className={"w-full p-1 text-center bg-gradient-to-r from-main-accent/30 to-main-accent/0"}>Current
                         Ratings
@@ -114,23 +115,23 @@ function CompareGames() {
 
                 <div className={"w-2/5 h-fit flex flex-col gap-4"}>
                     <GameSlot/>
-                    <div className={"w-full flex flex-row justify-end items-center gap-4"}>
+                    <div className={"w-full flex flex-row justify-end items-center gap-4 text-heading-2"}>
                         {/*<div className={"mr-auto"}>Current Ratings</div>*/}
                         <div className={"opacity-20"}>3.6</div>
                         <RatingStars ratings={3.6} size={24}/>
                     </div>
-                    <div className={"w-full flex flex-row justify-end items-center gap-4"}>
+                    <div className={"w-full flex flex-row justify-end items-center gap-4 text-heading-2"}>
                         {/*<div className={"mr-auto"}>Current Total Revenue</div>*/}
                         <div>10,000,000</div>
                     </div>
-                    <div className={"w-full flex flex-row justify-end items-center gap-4"}>
+                    <div className={"w-full flex flex-row justify-end items-center gap-4 text-heading-2"}>
                         {/*<div className={"mr-auto"}>Current Total Downloads</div>*/}
                         <div>500,000</div>
                     </div>
                 </div>
             </div>
 
-            <div className={"w-full px-8 h-full flex flex-row gap-2"}>
+            <div className={"w-full h-full flex flex-row gap-2"}>
                 <div className={"h-2/3 flex-1 flex flex-col w-1/2 gap-4 items-center"}>
                     <div className={"w-full flex flex-row justify-around"}>
                         <button type={"button"}
@@ -154,9 +155,9 @@ function CompareGames() {
                         </button>
                     </div>
                 </div>
-                <div className={"h-2/3 flex-2 flex flex-col gap-4"}>
+                <div className={"h-full flex-2 flex flex-col gap-4"}>
                     <div className={"w-full flex flex-row justify-between"}>
-                        <div className={"text-2xl font-semibold"}>Revenue</div>
+                        <div className={"text-heading-1 font-semibold"}>Revenue</div>
                         <ChartSpan/>
                     </div>
                     <ResponsiveContainer width="100%" height="100%">

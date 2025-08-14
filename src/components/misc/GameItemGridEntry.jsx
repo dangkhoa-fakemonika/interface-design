@@ -29,14 +29,14 @@ function GameItemGridEntry() {
                 !isHovering ?
                     <div
                         className={"absolute bottom-0 w-full h-1/4 bg-background-light/40 backdrop-blur-md flex flex-col justify-between p-2"}>
-                        <div className={"w-full text-lg"}>Limbus Company</div>
-                        <div className={"w-full text-end text-main-accent"}>Free to play</div>
+                        <div className={"w-full text-section-title"}>Limbus Company</div>
+                        <div className={"w-full text-end text-normal-text text-main-accent"}>Free to play</div>
                     </div>
                     :
                     <div className={"absolute z-5 bg-background-light/40 backdrop-blur-lg bottom-0 w-full h-full gap-2 p-4 flex flex-col justify-between box-border border-background-contrast border-t border-b " + (isRight ? "border-r -right-[100%]" : "border-l -left-[100%]")}>
                         <div className={"w-full flex flex-col gap-2"}>
-                            <div className={"font-semibold text-lg"}>Limbus Company</div>
-                            <div className={"opacity-60"}>Lorem Ispum</div>
+                            <div className={"font-medium text-normal-text"}>Limbus Company</div>
+                            <div className={"opacity-60 font-medium text-small-text"}>Lorem Ispum</div>
                             <div>
                                 <RatingStars ratings={4.5} size={20}/>
                             </div>
@@ -45,18 +45,18 @@ function GameItemGridEntry() {
                             <div className={"w-full flex flex-col justify-end gap-1 text-background-contrast px-1"}>
                                 <div className={"w-fit flex flex-row gap-2 text-center items-center"}>
                                     <FaUserPlus/>
-                                    <div>
+                                    <div className={"text-small-text"}>
                                         1699 last month
                                     </div>
                                 </div>
                                 <div className={"w-fit flex flex-row gap-2 text-center items-center"}>
                                     <MdInsights/>
-                                    <div>
+                                    <div className={"text-small-text"}>
                                         1240 last month
                                     </div>
                                 </div>
                             </div>
-                            <div className={"w-full text-end text-main-accent"}>Free to play</div>
+                            <div className={"w-full text-end text-normal-text font-medium text-main-accent"}>Free to play</div>
                         </div>
                     </div>
             }

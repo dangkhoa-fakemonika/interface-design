@@ -7,7 +7,7 @@ function FiltersTable() {
     return (
         <div className={"w-full h-fit flex flex-col grow border border-main-accent p-4 text-lg"}>
             <div className={"w-full flex flex-row justify-between my-2"}>
-                <div className={"text-xl font-semibold"}>Filters</div>
+                <div className={"text-heading-2 font-medium"}>Filters</div>
                 <Dialog.Root>
                     <Dialog.Trigger>
                         <AiOutlineExport/>
@@ -15,10 +15,13 @@ function FiltersTable() {
                     <Dialog.Portal>
                         <Dialog.Overlay className={"fixed"} />
                         <Dialog.Content className={"fixed left-1/2 top-1/2 -translate-1/2 w-2/3 h-2/3 bg-gradient-to-t to-80% from-background-light to-background z-30 shadow-2xl shadow-background-pop/20 p-8 flex flex-col gap-2 pb-8"}>
-                            <div className={"w-full flex flex-row justify-between"}>
-                                <Dialog.Title className={"text-2xl font-semibold"}>Filters</Dialog.Title>
+                            <div className={"w-full flex flex-row justify-end gap-2"}>
+                                <Dialog.Title className={"text-header-1 font-medium mr-auto"}>Filters</Dialog.Title>
                                 <Dialog.Close className={"p-2 bg-main-accent shadow shadow-main-accent text-sm"}>
                                     Save & Close
+                                </Dialog.Close>
+                                <Dialog.Close className={"p-2 bg-secondary-accent-accent shadow shadow-main-accent text-sm"}>
+                                    Cancel
                                 </Dialog.Close>
                             </div>
                             <hr/>
@@ -32,7 +35,7 @@ function FiltersTable() {
 
             <div className={"w-full flex flex-col justify-between pb-4 pt-2"}>
                 <div className={"w-full flex flex-row justify-between items-center"}>
-                    <div className={"font-semibold"}>Price</div>
+                    <div className={"text-label"}>Price</div>
                     {/*<AiOutlineExport/>*/}
                 </div>
                 <div className={"w-full flex flex-row justify-between"}>
@@ -47,11 +50,11 @@ function FiltersTable() {
                 <div className={"w-full flex flex-row gap-4 pt-4"}>
                     <label className={"w-fit flex flex-row gap-2"}>
                         <input className={""} type={"checkbox"}/>
-                        <div>On-sale</div>
+                        <div className={"text-label"}>On-sale</div>
                     </label>
                     <label className={"w-fit flex flex-row gap-2"}>
                         <input className={""} type={"checkbox"}/>
-                        <div>Free</div>
+                        <div className={"text-label"}>Free</div>
                     </label>
                 </div>
             </div>

@@ -9,8 +9,8 @@ function SearchEntry(){
                 className={"w-1/3 aspect-video object-cover"}
             />
             <div className={"w-full flex flex-col gap-2 justify-between p-4"}>
-                <div className={"text-xl font-bold"}>Limbus Company</div>
-                <div className={"text-main-accent group-hover:text-black duration-300 transition-colors"}>Free to Play</div>
+                <div className={"text-heading-2 font-medium"}>Limbus Company</div>
+                <div className={"text-heading-3 text-main-accent group-hover:text-black duration-300 transition-colors"}>Free to Play</div>
                 <div className={"w-full flex flex-row flex-wrap"}>
                     <Tags text={"Visual Novel"}/>
                 </div>

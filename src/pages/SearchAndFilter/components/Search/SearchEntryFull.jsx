@@ -10,8 +10,8 @@ function SearchEntryFull() {
 
     return (
         <div className={"w-full h-fit flex flex-col gap-2"}>
-            <div className={"w-full flex flex-row justify-between items-center"}>
-                <div className={"text-xl px-8 py-4"}>
+            <div className={"w-full flex flex-row justify-between items-center pl-8 pt-2"}>
+                <div className={"text-heading-2 font-medium"}>
                     Found 170 matches
                 </div>
                 <Tooltip.Provider>
@@ -30,7 +30,11 @@ function SearchEntryFull() {
                 </Tooltip.Provider>
             </div>
 
-            <div className={"w-full flex flex-row justify-end"}>
+            <div className={"w-full flex flex-row justify-between pl-8 "}>
+                <label className={"flex flex-row gap-2 text-heading-3 font-medium items-center"}>
+                    Show recorded best price
+                    <input type={"checkbox"}/>
+                </label>
                 <PagePagination/>
             </div>
 

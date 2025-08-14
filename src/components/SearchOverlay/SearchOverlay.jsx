@@ -6,7 +6,7 @@ function SearchOverlay(props) {
     const {searchValue, closeOverlay} = props;
 
     return (
-        <div className={"absolute w-full h-full flex flex-col grow bg-background-light/40 backdrop-blur-sm justify-start overflow-hidden"}>
+        <div className={"absolute w-full h-full flex flex-col grow bg-background-light/40 backdrop-blur-sm justify-start overflow-hidden z-20"}>
             <div className={"self-end p-4"}>
                 <IoClose size={40} onClick={closeOverlay}/>
             </div>

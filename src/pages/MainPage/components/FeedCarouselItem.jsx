@@ -29,10 +29,10 @@ function FeedCarouselItem(){
             </div>
 
             <div className={"w-full flex flex-row justify-between"}>
-                <div className={"text-3xl font-bold"}>
+                <div className={"text-heading-2 font-bold"}>
                     Limbus Company
                 </div>
-                <div className={"text-2xl font-medium text-main-accent"}>
+                <div className={"text-heading-2 font-medium text-main-accent"}>
                     Free to play
                 </div>
             </div>
@@ -46,13 +46,13 @@ function FeedCarouselItem(){
             <div className={"w-full flex flex-row justify-end gap-2 text-background-contrast gap-4"}>
                 <div className={"w-fit flex flex-row gap-2 text-center items-center"}>
                     <FaUserPlus/>
-                    <div>
+                    <div className={"text-normal-text"}>
                         1699 last month
                     </div>
                 </div>
                 <div className={"w-fit flex flex-row gap-2 text-center items-center"}>
                     <MdInsights/>
-                    <div>
+                    <div className={"text-normal-text"}>
                         1240 last month
                     </div>
                 </div>
