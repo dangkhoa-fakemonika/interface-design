@@ -20,7 +20,7 @@ function FiltersTable() {
                                 <Dialog.Close className={"p-2 bg-main-accent shadow shadow-main-accent text-sm"}>
                                     Save & Close
                                 </Dialog.Close>
-                                <Dialog.Close className={"p-2 bg-secondary-accent-accent shadow shadow-main-accent text-sm"}>
+                                <Dialog.Close className={"p-2 bg-secondary-accent shadow shadow-secondary-accent text-sm"}>
                                     Cancel
                                 </Dialog.Close>
                             </div>

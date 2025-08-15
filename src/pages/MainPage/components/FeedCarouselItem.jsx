@@ -7,7 +7,7 @@ function FeedCarouselItem(){
     const navigate = useNavigate();
 
     return (
-        <div className={"w-full flex flex-col p-8 gap-4 bg-gradient-to-t from-background to-background-light hover:to-20% transition-all duration-200 cursor-pointer"} onClick={() => {navigate("/game-page")}}>
+        <div className={"w-full flex flex-col p-8 gap-4 backdrop-blur-xl bg-background-pop/20 rounded-md transition-all duration-200 cursor-pointer"} onClick={() => {navigate("/game-page")}}>
             <div className={"w-full flex flex-row justify-between gap-4"}>
                 <img
                     src={"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1973530/header.jpg?t=1747619569"}

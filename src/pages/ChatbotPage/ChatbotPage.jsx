@@ -1,6 +1,8 @@
 import {IoClose} from "react-icons/io5";
 import {FaArrowCircleUp} from "react-icons/fa";
 import {RiChatSmileAiLine} from "react-icons/ri";
+import {useState} from "react";
+import Typewriter from "@/pages/ChatbotPage/components/Typewriter.jsx";
 
 function ChatbotPage(){
     const frequentlyAsked = [
@@ -17,16 +19,39 @@ function ChatbotPage(){
         "How do I use this?"
     ]
 
-    const chatContent = [
-        {
-            sender : true,
-            message : "Hi"
-        },
+    const [chatContent, setChatContent] = useState([
         {
             sender : false,
-            message : "Hello"
+            message : "Hello, I am the among us assistant. How may I help today?"
         }
-    ]
+    ])
+
+    const addChatContent = ((s) => {
+        setChatContent(prevState => {
+            const newState = [...prevState];
+            newState.push({
+                sender: true,
+                message: s
+            });
+            return newState;
+        });
+
+        setTimeout(addPromptContent, 1000)
+    })
+
+    const addPromptContent = (() => {
+
+        setChatContent(prevState => {
+            const newState = [...prevState];
+            newState.push({
+                sender: false,
+                message: "Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us "
+            });
+            return newState;
+        });
+    })
+
+    const [typedMessage, setTypeMessage] = useState("");
 
     return (
         <div className={"w-full h-full flex flex-row"}>
@@ -55,8 +80,11 @@ function ChatbotPage(){
                     {
                         chatContent.map(({sender, message}) => (
                             <div
-                                className={"text-normal-text " + (sender ? "self-end bg-background-pop py-1 px-2 rounded" : "self-start")}>
-                                {message}
+                                className={"text-normal-text max-w-2/3 " + (sender ? "self-end bg-background-pop py-1 px-2 rounded" : "self-start")}>
+                                {
+                                    sender ? message
+                                    : <Typewriter input={message}/>
+                                }
                             </div>
                         ))
                     }
@@ -65,7 +93,7 @@ function ChatbotPage(){
                 <div className={"w-full flex flex-row gap-2"}>
                     {
                         recommendation.map((text) => (
-                            <div className={"text-normal-text w-fit px-2 py-1 bg-background-pop text-white rounded cursor-pointer"}>
+                            <div className={"text-normal-text w-fit px-2 py-1 bg-background-pop text-white rounded cursor-pointer"} onClick={addChatContent}>
                                 {text}
                             </div>
                         ))
@@ -73,8 +101,11 @@ function ChatbotPage(){
                 </div>
                 <div
                     className={"bg-white flex flex-row text-background w-full min-h-1/12 max-h-1/8 h-fit rounded items-center p-2 shrink-0"}>
-                    <textarea className={"w-full h-full outline-none resize-none text-normal-text"}/>
-                    <FaArrowCircleUp size={24}/>
+                    <textarea className={"w-full h-full outline-none resize-none text-normal-text"} onChange={(event) => {setTypeMessage(event.target.value)}} value={typedMessage}/>
+                    <FaArrowCircleUp size={24} onClick={() => {
+                        addChatContent(typedMessage);
+                        setTypeMessage("");
+                    }}/>
                 </div>
             </div>
         </div>

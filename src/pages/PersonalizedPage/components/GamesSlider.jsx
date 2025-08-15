@@ -6,14 +6,14 @@ function GamesSlider(){
     const thisRef = useRef(null);
     const scrollToLeft = () => {
         thisRef.current.scrollTo({
-            left: 20,
+            left: 0,
             behavior: "smooth",
         })
     }
 
     const scrollToRight = () => {
         thisRef.current.scrollTo({
-            right: 20,
+            left: thisRef.current.scrollWidth,
             behavior: "smooth",
         })
     }

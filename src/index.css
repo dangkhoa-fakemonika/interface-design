@@ -46,4 +46,6 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+.slick-list {margin: 0 -12px;}
+.slick-slide>div {padding: 0 12px;}
 
