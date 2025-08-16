@@ -23,26 +23,26 @@ function GameItemGridEntry() {
             <img
                 src={"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1973530/header.jpg?t=1747619569"}
                 alt={"something"}
-                className={"w-full aspect-2/3 object-cover object-[7%_50%] group-hover:border-background-contrast group-hover:border-t group-hover:border-b " + (isRight ? "group-hover:border-l" : "group-hover:border-r")}
+                className={"w-full aspect-2/3 object-cover object-[7%_50%] group-hover:dark:border-background-contrast group-hover:border-contrast-background-alt group-hover:border-t group-hover:border-b " + (isRight ? "group-hover:border-l" : "group-hover:border-r")}
             />
             {
                 !isHovering ?
                     <div
                         className={"absolute bottom-0 w-full h-1/4 bg-background-light/40 backdrop-blur-md flex flex-col justify-between p-2"}>
-                        <div className={"w-full text-section-title"}>Limbus Company</div>
-                        <div className={"w-full text-end text-normal-text text-main-accent"}>Free to play</div>
+                        <div className={"w-full text-section-title dark:text-text text-contrast-background-alt"}>Limbus Company</div>
+                        <div className={"w-full text-end text-normal-text dark:text-main-accent text-main-accent-alt"}>Free to play</div>
                     </div>
                     :
-                    <div className={"absolute z-5 bg-background-light/40 backdrop-blur-lg bottom-0 w-full h-full gap-2 p-4 flex flex-col justify-between box-border border-background-contrast border-t border-b " + (isRight ? "border-r -right-[100%]" : "border-l -left-[100%]")}>
+                    <div className={"absolute z-5 bg-background-light/40 backdrop-blur-lg bottom-0 w-full h-full gap-2 p-4 flex flex-col justify-between box-border dark:border-background-contrast border-contrast-background-alt border-t border-b " + (isRight ? "border-r -right-[100%]" : "border-l -left-[100%]")}>
                         <div className={"w-full flex flex-col gap-2"}>
-                            <div className={"font-medium text-normal-text"}>Limbus Company</div>
-                            <div className={"opacity-60 font-medium text-small-text"}>Lorem Ispum</div>
+                            <div className={"font-medium text-normal-text dark:text-text text-contrast-background-alt"}>Limbus Company</div>
+                            <div className={"opacity-60 font-medium text-small-text text-extra-alt dark:text-text"}>Lorem Ispum</div>
                             <div>
                                 <RatingStars ratings={4.5} size={20}/>
                             </div>
                         </div>
                         <div className={"w-full flex flex-col gap-1 text-sm"}>
-                            <div className={"w-full flex flex-col justify-end gap-1 text-background-contrast px-1"}>
+                            <div className={"w-full flex flex-col justify-end gap-1 dark:text-background-contrast text-contrast-background-alt px-1"}>
                                 <div className={"w-fit flex flex-row gap-2 text-center items-center"}>
                                     <FaUserPlus/>
                                     <div className={"text-small-text"}>
@@ -56,7 +56,7 @@ function GameItemGridEntry() {
                                     </div>
                                 </div>
                             </div>
-                            <div className={"w-full text-end text-normal-text font-medium text-main-accent"}>Free to play</div>
+                            <div className={"w-full text-end text-normal-text font-medium dark:text-main-accent text-main-accent-alt"}>Free to play</div>
                         </div>
                     </div>
             }

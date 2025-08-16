@@ -7,7 +7,7 @@ function Header(props){
     const {toggleOnSearch, setSearchValue} = props;
 
     return (
-        <div className={"flex flex-row w-screen bg-background-light p-2 items-center justify-between"}>
+        <div className={"flex flex-row w-screen dark:bg-background-light bg-contrast-background-alt p-2 items-center justify-between"}>
             <div className={"flex flex-row justify-start items-center gap-2 w-2/3"}>
                 <SideBarPopover/>
                 <NavLink to={"/"}>

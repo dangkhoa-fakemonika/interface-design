@@ -5,7 +5,7 @@ function ChatbotFloatingButton(props) {
     const {changeState} = props;
 
     return (
-        <div className={"border border-background-pop bg-background rounded-full p-2 cursor-pointer"}>
+        <div className={"dark:text-text text-text-alt dark:border-background-pop dark:bg-background bg-background-light-alt border border-contrast-background-alt rounded-full p-2 cursor-pointer"}>
             <Tooltip.Provider>
                 <Tooltip.Root>
                     <Tooltip.Trigger asChild>
@@ -14,7 +14,7 @@ function ChatbotFloatingButton(props) {
                     <Tooltip.Portal>
                         <Tooltip.Content
                             side={"left"}
-                            className={"p-2 rounded bg-white leading-none text-background"}
+                            className={"p-2 rounded bg-white leading-none text-background border border-contrast-background-alt"}
                             sideOffset={20}
                         >
                             Chat with AI Assistant

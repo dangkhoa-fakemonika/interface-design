@@ -4,7 +4,7 @@ function Sidebar() {
     const navigate = useNavigate();
 
     return (
-        <div className={"w-full flex flex-col gap-2 p-4 *:text-main-accent *:hover:text-secondary-accent *:transition-colors *:duration-100 *:cursor-pointer"}>
+        <div className={"w-full flex flex-col gap-2 p-4 dark:*:text-main-accent dark:*:hover:text-secondary-accent *:text-background-pop-alt *:hover:text-main-accent-alt *:transition-colors *:duration-100 *:cursor-pointer"}>
             <div className="text-label py-2 font-bold">Quick Access</div>
             <div className="text-section-title" onClick={() => navigate("/personalized-page")}>What's for me?</div>
             <div className="text-section-title">My Collection</div>

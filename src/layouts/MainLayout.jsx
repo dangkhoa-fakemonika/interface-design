@@ -22,7 +22,7 @@ function MainLayout(){
 
 
     return (
-        <div className={"flex flex-col bg-gradient-to-t from-background-light to-background w-screen h-screen overflow-hidden"}>
+        <div className={"flex flex-col dark:bg-gradient-to-t dark:from-background-light dark:to-background bg-background-alt w-screen h-screen overflow-hidden"}>
             <Header toggleOnSearch={searchOn} setSearchValue={changeSearchValue}/>
             <div className={"relative w-full flex flex-row grow overflow-hidden"}>
                 <ChatbotWidget/>

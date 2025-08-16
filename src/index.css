@@ -9,6 +9,15 @@
   --color-background-pop : #4C85FF;
   --color-background-contrast : #00EEFF;
 
+  --color-background-alt: #F1F1F1;
+  --color-text-alt: #000000;
+  --color-main-accent-alt: #2EAD33;
+  --color-secondary-accent-alt: #E2574C;
+  --color-extra-alt: #333333;
+  --color-background-light-alt: #FFFFFF;
+  --color-background-pop-alt: #3ABEF9;
+  --color-contrast-background-alt: #050C9C;
+
   --text-heading-1 : 32px;
   --text-heading-2 : 24px;
   --text-heading-3 : 20px;
@@ -34,6 +43,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
