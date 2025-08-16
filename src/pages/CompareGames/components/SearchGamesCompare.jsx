@@ -5,14 +5,14 @@ function SearchGamesCompare(){
     return (
         <div className={"w-full h-full flex flex-col gap-2"}>
             <label
-                className={"items-center flex flex-row gap-2 group focus-within:border-background-pop hover:border-background-pop border-2 border-background-light py-2 p-4 transition-colors duration-300 w-full"}>
-                <input type={"text"} className={"outline-none text-label w-full"} placeholder={"Search a game..."}/>
+                className={"items-center flex flex-row gap-2 group dark:focus-within:border-background-pop dark:hover:border-background-pop focus-within:border-contrast-background-alt hover:border-contrast-background-alt border-2 dark:border-background-light border-background-pop-alt py-2 p-4 transition-colors duration-300 w-full"}>
+                <input type={"text"} className={"outline-none text-label w-full text-text-alt dark:text-text"} placeholder={"Search a game..."}/>
                 <FaSearch size={24}
-                          className={"text-background-pop opacity-20 group-focus-within:opacity-100 group-hover:opacity-100 transition-opacity duration-300"}/>
+                          className={"dark:text-background-pop text-contrast-background-alt opacity-20 group-focus-within:opacity-100 group-hover:opacity-100 transition-opacity duration-300"}/>
             </label>
 
-            <hr/>
-            <div className={"text-heading-2"}>Recent</div>
+            <hr className={"dark:text-text text-contrast-background-alt"}/>
+            <div className={"text-heading-2 dark:text-text text-contrast-background-alt"}>Recent</div>
             <div className={"w-full h-3/4 flex flex-col gap-2 overflow-y-scroll my-auto"}>
                 {
                     new Array(6).fill("").map(() => (

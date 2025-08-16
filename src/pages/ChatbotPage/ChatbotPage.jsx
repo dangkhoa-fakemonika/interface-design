@@ -3,8 +3,13 @@ import {FaArrowCircleUp} from "react-icons/fa";
 import {RiChatSmileAiLine} from "react-icons/ri";
 import {useState} from "react";
 import Typewriter from "@/pages/ChatbotPage/components/Typewriter.jsx";
+import {useNavigate} from "react-router";
+import {myPrompt} from "@/shared/services/gemini.js";
 
 function ChatbotPage(){
+    const navigate = useNavigate();
+
+
     const frequentlyAsked = [
         "News Summary",
         "Games Recommendation",
@@ -26,7 +31,7 @@ function ChatbotPage(){
         }
     ])
 
-    const addChatContent = ((s) => {
+    const addChatContent = async (s) => {
         setChatContent(prevState => {
             const newState = [...prevState];
             newState.push({
@@ -36,20 +41,22 @@ function ChatbotPage(){
             return newState;
         });
 
-        setTimeout(addPromptContent, 1000)
-    })
+        const result = await myPrompt(s);
 
-    const addPromptContent = (() => {
+        setTimeout(() => addPromptContent(result), 1000)
+    }
+
+    const addPromptContent = (s) => {
 
         setChatContent(prevState => {
             const newState = [...prevState];
             newState.push({
                 sender: false,
-                message: "Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us Among Us "
+                message: s
             });
             return newState;
         });
-    })
+    }
 
     const [typedMessage, setTypeMessage] = useState("");
 
@@ -74,7 +81,7 @@ function ChatbotPage(){
                         <div className={"font-semibold text-heading-2 "}> GameStats Assistant </div>
                         <RiChatSmileAiLine size={24}/>
                     </div>
-                    <IoClose size={32} className={"dark:text-text text-text-alt"}/>
+                    <IoClose size={32} className={"dark:text-text text-text-alt"} onClick={() => {navigate(-1);}}/>
                 </div>
                 <div className={"w-full h-full flex flex-col gap-2 justify-end shrink"}>
                     {

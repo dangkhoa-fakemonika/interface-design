@@ -16,19 +16,19 @@ function ChartSpan(){
 
     return (
         <div className={"w-fit flex flex-row gap-2"}>
-            <div className={"w-fit flex flex-row gap-2 items-center"}>
+            <div className={"w-fit flex flex-row gap-2 items-center text-contrast-background-alt dark:text-text"}>
                 <div>From</div>
 
                 {
                     chartType === "Monthly" ?
                     <Select.Root>
-                        <Select.Trigger className={"gap-4 flex flex-row border border-background-pop p-2"}>
+                        <Select.Trigger className={"gap-4 flex flex-row border dark:border-background-pop border-contrast-background-alt p-2 shadow-2xl"}>
                             <Select.Value defaultValue={"Jul"} className={"text-white"} placeholder={"Jul"}/>
                             <Select.Icon/>
                         </Select.Trigger>
 
                         <Select.Portal>
-                            <Select.Content className={"w-full p-2 bg-background border border-background-pop"}>
+                            <Select.Content className={"w-full p-2 dark:bg-background border dark:border-background-pop bg-background-alt text-contrast-background-alt dark:text-text "}>
                                 <Select.Viewport className={"flex flex-col gap-2"}>
                                     {
                                         months.map((m) => (
@@ -45,13 +45,13 @@ function ChartSpan(){
                 }
 
                 <Select.Root>
-                    <Select.Trigger className={"gap-4 flex flex-row border border-background-pop p-2"}>
+                    <Select.Trigger className={"gap-4 flex flex-row border dark:border-background-pop border-contrast-background-alt p-2 shadow-2xl p-2"}>
                         <Select.Value defaultValue={"2024"} className={"text-white"} placeholder={"2024"}/>
                         <Select.Icon/>
                     </Select.Trigger>
 
                     <Select.Portal>
-                        <Select.Content className={"w-full p-2 bg-background border border-background-pop"}>
+                        <Select.Content className={"w-full p-2 dark:bg-background border dark:border-background-pop bg-background-alt text-contrast-background-alt dark:text-text"}>
                             <Select.Viewport className={"flex flex-col gap-2"}>
                                 {
                                     years.map((m) => (
@@ -70,13 +70,13 @@ function ChartSpan(){
                 {
                     chartType === "Monthly" ?
                     <Select.Root>
-                        <Select.Trigger className={"gap-4 flex flex-row border border-background-pop p-2"}>
+                        <Select.Trigger className={"gap-4 flex flex-row border dark:border-background-pop border-contrast-background-alt p-2 shadow-2xl p-2"}>
                             <Select.Value defaultValue={"Feb"} className={"text-white"} placeholder={"Feb"}/>
                             <Select.Icon/>
                         </Select.Trigger>
 
                         <Select.Portal>
-                            <Select.Content className={"w-full p-2 bg-background border border-background-pop"}>
+                            <Select.Content className={"w-full p-2 dark:bg-background border dark:border-background-pop bg-background-alt text-contrast-background-alt dark:text-text"}>
                                 <Select.Viewport className={"flex flex-col gap-2"}>
                                     {
                                         months.map((m) => (
@@ -93,13 +93,13 @@ function ChartSpan(){
                 }
 
                 <Select.Root>
-                    <Select.Trigger className={"gap-4 flex flex-row border border-background-pop p-2"}>
+                    <Select.Trigger className={"gap-4 flex flex-row border dark:border-background-pop border-contrast-background-alt p-2 shadow-2xl p-2"}>
                         <Select.Value defaultValue={"2025"} className={"text-white"} placeholder={"2025"}/>
                         <Select.Icon/>
                     </Select.Trigger>
 
                     <Select.Portal>
-                        <Select.Content className={"w-full p-2 bg-background border border-background-pop"}>
+                        <Select.Content className={"w-full p-2 dark:bg-background border dark:border-background-pop bg-background-alt text-contrast-background-alt dark:text-text"}>
                             <Select.Viewport className={"flex flex-col gap-2"}>
                                 {
                                     years.map((m) => (
@@ -116,13 +116,13 @@ function ChartSpan(){
             </div>
 
             <Select.Root value={chartType} onValueChange={(value) => setChartType(value)}>
-                <Select.Trigger className={"gap-4 flex flex-row border border-background-pop p-2"}>
+                <Select.Trigger className={"gap-4 flex flex-row border dark:border-background-pop border-contrast-background-alt p-2 shadow-2xl dark:text-text text-contrast-background-alt"}>
                     <Select.Value defaultValue={"Monthly"} className={"text-white"} placeholder={"Monthly"}/>
                     <Select.Icon/>
                 </Select.Trigger>
 
                 <Select.Portal>
-                    <Select.Content className={"w-full p-2 bg-background border border-background-pop"}>
+                    <Select.Content className={"w-full p-2 dark:bg-background border dark:border-background-pop bg-background-alt text-contrast-background-alt dark:text-text"}>
                         <Select.Viewport>
                             <Select.Item value={"Monthly"}>
                                 <Select.ItemText>

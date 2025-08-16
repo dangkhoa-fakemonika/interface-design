@@ -81,24 +81,27 @@ function CompareGames() {
         <div className={"w-full p-8 flex flex-col gap-8 overflow-y-scroll"}>
             <div className={"w-full flex flex-row h-fit justify-between"}>
 
-                <div className={"flex flex-col h-full gap-2 justify-end items-center text-heading-2"}>
-                    <div className={"mb-auto w-full text-heading-1"}>Game Comparison</div>
+                <div
+                    className={"flex flex-col h-full gap-2 justify-end items-center text-heading-2 font-medium text-contrast-background-alt dark:text-text"}>
+                    <div className={"mb-auto w-full text-heading-1 "}>Game Comparison</div>
+                    <hr className={"w-full dark:text-text text-contrast-background-alt"}/>
                     <div
-                        className={"w-full p-1 text-start bg-gradient-to-r from-main-accent/30 to-main-accent/0"}>Current
+                        className={"w-full p-1 text-start"}>Current
                         Ratings
                     </div>
                     <div
-                        className={"w-full p-1 text-start bg-gradient-to-l from-main-accent/30 to-main-accent/0"}>Current
+                        className={"w-full p-1 text-start"}>Current
                         Total Revenue
                     </div>
                     <div
-                        className={"w-full p-1 text-start bg-gradient-to-l from-main-accent/30 to-main-accent/0"}>Current
+                        className={"w-full p-1 text-start"}>Current
                         Total Downloads
                     </div>
                 </div>
 
-                <div className={"w-2/5 h-fit flex flex-col gap-4"}>
+                <div className={"w-2/5 h-fit flex flex-col gap-4 text-contrast-background-alt dark:text-text"}>
                     <GameSlot/>
+                    <hr className={"w-full dark:text-text text-contrast-background-alt"}/>
                     <div className={"w-full flex flex-row justify-end items-center gap-4 text-heading-2"}>
                         {/*<div className={"mr-auto"}>Current Ratings</div>*/}
                         <div className={"opacity-20"}>4.5</div>
@@ -115,8 +118,9 @@ function CompareGames() {
                 </div>
 
 
-                <div className={"w-2/5 h-fit flex flex-col gap-4"}>
+                <div className={"w-2/5 h-fit flex flex-col gap-4 text-contrast-background-alt dark:text-text"}>
                     <GameSlot/>
+                    <hr className={"w-full dark:text-text text-contrast-background-alt"}/>
                     <div className={"w-full flex flex-row justify-end items-center gap-4 text-heading-2"}>
                         {/*<div className={"mr-auto"}>Current Ratings</div>*/}
                         <div className={"opacity-20"}>3.6</div>
@@ -132,6 +136,8 @@ function CompareGames() {
                     </div>
                 </div>
             </div>
+
+            <hr className={"w-full dark:text-text text-contrast-background-alt"}/>
 
             <div className={"w-full h-full flex flex-row gap-2"}>
                 <div className={"h-2/3 flex-1 flex flex-col w-1/2 gap-4 items-center"}>
@@ -159,7 +165,7 @@ function CompareGames() {
                 </div>
                 <div className={"h-full flex-2 flex flex-col gap-4"}>
                     <div className={"w-full flex flex-row justify-between"}>
-                        <div className={"text-heading-1 font-semibold"}>Revenue</div>
+                        <div className={"text-heading-1 font-semibold text-contrast-background-alt dark:text-text"}>Revenue</div>
                         <ChartSpan/>
                     </div>
                     <ResponsiveContainer width="100%" height="100%">
