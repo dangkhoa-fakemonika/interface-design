@@ -6,6 +6,7 @@ import SearchAndFilter from "@/pages/SearchAndFilter/SearchAndFilter.jsx";
 import SingleGamePage from "@/pages/SingleGamePage/SingleGamePage.jsx";
 import CompareGames from "@/pages/CompareGames/CompareGames.jsx";
 import PersonalizedPage from "@/pages/PersonalizedPage/PersonalizedPage.jsx";
+import LoginPage from "@/pages/LoginPage/LoginPage";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path : "/personalized-page",
                 Component: PersonalizedPage
+            },
+            {
+                path : "/login",
+                Component: LoginPage
             }
         ]
     }
