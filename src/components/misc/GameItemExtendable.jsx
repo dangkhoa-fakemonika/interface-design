@@ -2,20 +2,24 @@ import {useLayoutEffect, useRef, useState} from "react";
 import {FaUserPlus} from "react-icons/fa6";
 import {MdInsights} from "react-icons/md";
 import RatingStars from "@/components/misc/RatingStars.jsx";
+import {useNavigate} from "react-router";
 
-function GameItemExtendable() {
+function GameItemExtendable(props) {
     const thisRef = useRef(null);
     const [isHovering, setHovering] = useState(false);
+    const {num} = props;
+    const navigate = useNavigate();
 
     return (
         <div
+            onClick={() => navigate("/game-page")}
             className={"flex flex-row group relative w-1/6 box-border hover:border hover:dark:border-background-pop hover:border-contrast-background-alt " + (isHovering ? "aspect-4/3 min-w-[360px] max-w-[720px]" : "aspect-2/3 min-w-[180px] max-w-[360px]")}
             ref={thisRef} onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}>
             <img
-                src={"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1973530/header.jpg?t=1747619569"}
+                src={"/games/" + num + ".jpg"}
                 alt={"something"}
-                className={"flex-1 aspect-2/3 object-cover object-[7%_50%] z-1"}
+                className={"flex-1 aspect-2/3 object-cover object-[50%_50%] z-1"}
             />
             <div
                 className={"dark:bg-background-light/40 bg-background-alt/40 backdrop-blur-lg h-full gap-2 p-4 flex flex-col justify-between aspect-2/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500"}>

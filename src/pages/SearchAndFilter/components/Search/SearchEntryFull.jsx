@@ -43,14 +43,18 @@ function SearchEntryFull() {
                     <div
                         className={"w-full h-screen flex flex-row flex-wrap gap-8 items-center justify-center overflow-y-scroll"}>
                         {
-                            new Array(40).fill("").map(() => <GameItemGridEntry/>)
+                            Array.from({ length: 40 }, (_, i) => i + 1).map(
+                                (i) => <GameItemGridEntry num={(i + Math.floor(Math.random() * (17))) % 17}/>
+                            )
                         }
                     </div>
                     :
                     <div
                         className={"w-full h-screen flex flex-col gap-8 items-center justify-start overflow-y-scroll ps-8"}>
                         {
-                            new Array(40).fill("").map(() => <GameItemListEntry/>)
+                            Array.from({ length: 40 }, (_, i) => i + 1).map(
+                                (i) => <GameItemListEntry num={(i + Math.floor(Math.random() * (17))) % 17}/>
+                            )
                         }
                     </div>
             }

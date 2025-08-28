@@ -19,15 +19,15 @@ function ChatbotPage(){
     ]
 
     const recommendation = [
-        "Help",
-        "Ayo this might be bussin",
-        "How do I use this?"
+        "Walk me through this page",
+        "How do I use this?",
+        "Get me the latest news"
     ]
 
     const [chatContent, setChatContent] = useState([
         {
             sender : false,
-            message : "Hello, I am the among us assistant. How may I help today?"
+            message : "Hello, I am the GameStop AI assistant. How may I help you today?"
         }
     ])
 
@@ -100,7 +100,7 @@ function ChatbotPage(){
                 <div className={"w-full flex flex-row gap-2 "}>
                     {
                         recommendation.map((text) => (
-                            <div className={"text-normal-text w-fit px-2 py-1 text-text-alt dark:text-text dark:bg-background-pop bg-background-light-alt border-2 border-contrast-background-alt dark:border-none rounded cursor-pointer"} onClick={() => addChatContent("Hi")}>
+                            <div className={"text-normal-text w-fit px-2 py-1 text-text-alt dark:text-text dark:bg-background-pop bg-background-light-alt border-2 border-contrast-background-alt dark:border-none rounded cursor-pointer"} onClick={() => addChatContent(text)}>
                                 {text}
                             </div>
                         ))

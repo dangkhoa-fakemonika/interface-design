@@ -59,22 +59,29 @@ function Performance() {
         <div className={"w-full h-full flex flex-row gap-2"}>
             <div className={"h-2/3 flex-1 flex flex-col w-1/2 gap-4 items-center"}>
                 <div className={"w-full flex flex-row justify-around"}>
-                    <button type={"button"} className={"bg-background-pop py-2 px-4 hover:bg-main-accent transition-colors duration-300"} onClick={() => navigate("/compare-games")}>
+                    <button type={"button"}
+                            className={"bg-background-pop py-2 px-4 hover:bg-main-accent transition-colors duration-300"}
+                            onClick={() => navigate("/compare-games")}>
                         Compare with another game
                     </button>
-                    <button type={"button"} className={"bg-background-pop py-2 px-4 hover:bg-main-accent transition-colors duration-300"}>
+                    <button type={"button"}
+                            className={"bg-background-pop py-2 px-4 hover:bg-main-accent transition-colors duration-300"}>
                         Export chart data
                     </button>
                 </div>
                 <PerformanceOptions/>
                 <div className={"w-full flex flex-row"}>
-                    <button type={"button"} className={"group flex-1 justify-center flex-row gap-2 p-2 flex transition-colors duration-300 " + (chartType === false ? "bg-background-pop" : "bg-background-pop/20 hover:bg-background-pop/40")} onClick={() => setChartType(false)}>
+                    <button type={"button"}
+                            className={"group flex-1 justify-center flex-row gap-2 p-2 flex transition-colors duration-300 " + (chartType === false ? "bg-background-pop" : "bg-background-pop/20 hover:bg-background-pop/40")}
+                            onClick={() => setChartType(false)}>
                         <div className={"group-hover:block hidden"}>Line Chart</div>
-                        <FaChartLine size={24} />
+                        <FaChartLine size={24}/>
                     </button>
-                    <button type={"button"} className={"group flex-1 justify-center flex-row gap-2 p-2 flex transition-colors duration-300 " + (chartType === true ? "bg-background-pop" : "bg-background-pop/20 hover:bg-background-pop/40")} onClick={() => setChartType(true)}>
+                    <button type={"button"}
+                            className={"group flex-1 justify-center flex-row gap-2 p-2 flex transition-colors duration-300 " + (chartType === true ? "bg-background-pop" : "bg-background-pop/20 hover:bg-background-pop/40")}
+                            onClick={() => setChartType(true)}>
                         <div className={"group-hover:block hidden"}>Bar Chart</div>
-                        <FaChartBar size={24} />
+                        <FaChartBar size={24}/>
                     </button>
                 </div>
             </div>
@@ -98,12 +105,35 @@ function Performance() {
                         <CartesianGrid strokeDasharray="10 10"/>
                         <XAxis dataKey="name"/>
                         <YAxis/>
-                        <Tooltip />
-                        <Legend/>
-                        {
-                            !chartType ?
-                            <Line type="monotone" dataKey="value" stroke="var(--color-background-contrast)" activeDot={{r: 8}}/> : <Bar type="monotone" dataKey="value" fill="var(--color-background-pop)" activeBar={<Rectangle fill="var(--color-background-light)" stroke="var(--color-background-contrast)" />}/>
-                        }
+                        <Tooltip content={
+                            ({active, payload, label}) => {
+                                if (active && payload && payload.length) {
+                                    return (
+                                        <div className="custom-tooltip bg-background flex flex-col gap-2 p-2 border border-white">
+                                            <div className="label text-main-accent">{`${label}`}</div>
+                                            <div className="intro text-background-contrast">{`Value : ${payload[0].value}`}</div>
+                                        </div>
+                                    );
+                                }
+
+                                return null;
+                            }
+                        } />
+                        <Legend formatter={
+                            (value, entry) => {
+                                // `entry` contains the color and data of the legend item
+                                const { color } = entry;
+                                return <span style={{ color }}>Limbus Company</span>;
+                            }
+                        }/>
+                            {
+                                !chartType ?
+                                    <Line type="monotone" dataKey="value" stroke="var(--color-background-contrast)"
+                                          activeDot={{r: 8}}/> :
+                                    <Bar type="monotone" dataKey="value" fill="var(--color-background-pop)"
+                                         activeBar={<Rectangle fill="var(--color-background-light)"
+                                                               stroke="var(--color-background-contrast)"/>}/>
+                            }
                     </LineChart>
                 </ResponsiveContainer>
             </div>

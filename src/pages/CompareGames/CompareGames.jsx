@@ -180,8 +180,32 @@ function CompareGames() {
                             <CartesianGrid strokeDasharray="10 10"/>
                             <XAxis dataKey="name"/>
                             <YAxis/>
-                            <Tooltip/>
-                            <Legend/>
+                            <Tooltip content={
+                                ({active, payload, label}) => {
+                                    if (active && payload && payload.length) {
+                                        return (
+                                            <div
+                                                className="custom-tooltip bg-background flex flex-col gap-2 p-2 border border-white">
+                                                <div className="label text-background-contrast">{`${label}`}</div>
+                                                <div
+                                                    className="intro text-main-accent">{`Limbus Company : ${payload[0].value}`}</div>
+                                                <div
+                                                    className="intro text-secondary-accent">{`Limbus Company : ${payload[1].value}`}</div>
+
+                                            </div>
+                                        );
+                                    }
+
+                                    return null;
+                                }
+                            } />
+                            <Legend formatter={
+                                (value, entry) => {
+                                    // `entry` contains the color and data of the legend item
+                                    const { color } = entry;
+                                    return <span style={{ color }}>Limbus Company</span>;
+                                }
+                            }/>
                             {!chartType ?
 
                                 <>

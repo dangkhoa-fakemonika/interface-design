@@ -2,8 +2,9 @@ import { useLayoutEffect, useRef, useState} from "react";
 import {FaUserPlus} from "react-icons/fa6";
 import {MdInsights} from "react-icons/md";
 import RatingStars from "@/components/misc/RatingStars.jsx";
+import {useNavigate} from "react-router";
 
-function GameItemGridEntry() {
+function GameItemGridEntry(props) {
     const thisRef = useRef(null);
     const [isHovering, setHovering] = useState(false);
     const [isRight, setRight] = useState(true);
@@ -16,12 +17,15 @@ function GameItemGridEntry() {
         }
     }, [thisRef, isHovering])
 
+    const {num} = props;
+    const navigate = useNavigate();
 
     return (
-        <div className={"group relative w-1/6 min-w-[180px] max-w-[240px] aspect-2/3 box-border"} ref={thisRef} onMouseEnter={() => setHovering(true)}
+        <div onClick={() => navigate("/game-page")}
+            className={"group relative w-1/6 min-w-[180px] max-w-[240px] aspect-2/3 box-border"} ref={thisRef} onMouseEnter={() => setHovering(true)}
              onMouseLeave={() => setHovering(false)}>
             <img
-                src={"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1973530/header.jpg?t=1747619569"}
+                src={"games/" + num + ".jpg"}
                 alt={"something"}
                 className={"w-full aspect-2/3 object-cover object-[7%_50%] group-hover:dark:border-background-contrast group-hover:border-contrast-background-alt group-hover:border-t group-hover:border-b " + (isRight ? "group-hover:border-l" : "group-hover:border-r")}
             />

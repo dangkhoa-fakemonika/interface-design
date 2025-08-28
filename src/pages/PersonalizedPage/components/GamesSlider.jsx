@@ -30,9 +30,13 @@ function GamesSlider(){
             <div className={"relative w-full overflow-x-scroll"} style={{scrollbarWidth : "none"}} ref={thisRef}>
                 <div className={"w-fit flex-row flex gap-16"}>
                     {
-                        new Array(10).fill("").map(() => (
-                            <GameItemExtendable/>
-                        ))
+                        Array.from({ length: 10 }, (_, i) => i + 1).map((i) => {
+                                const newNum = (i + Math.floor(Math.random() * (17))) % 17
+                                return (
+                                    <GameItemExtendable num={newNum}/>
+                                )
+                            }
+                        )
                     }
                 </div>
             </div>

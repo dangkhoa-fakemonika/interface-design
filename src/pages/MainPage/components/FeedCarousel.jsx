@@ -24,10 +24,15 @@ function FeedCarousel(){
             <FeedCarouselArrow direction={"left"} onClick={() => sliderRef.current.slickPrev()}/>
             <div className={"w-1/2"}>
                 <Slider {...settings}  ref={sliderRef}>
-                    <FeedCarouselItem/>
-                    <FeedCarouselItem/>
-                    <FeedCarouselItem/>
-                    <FeedCarouselItem/>
+                    {
+                        Array.from({ length: 5 }, (_, i) => i + 1).map(
+                            (i) =>
+                                    <FeedCarouselItem num={(i + Math.floor(Math.random() * (17))) % 17}/>
+                        )
+                    }
+                    {/*<FeedCarouselItem/>*/}
+                    {/*<FeedCarouselItem/>*/}
+                    {/*<FeedCarouselItem/>*/}
                 </Slider>
             </div>
             <FeedCarouselArrow direction={"right"} onClick={() => sliderRef.current.slickNext()}/>

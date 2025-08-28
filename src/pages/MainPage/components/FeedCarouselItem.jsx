@@ -3,14 +3,15 @@ import { FaUserPlus } from "react-icons/fa6";
 import { MdInsights } from "react-icons/md";
 import {useNavigate} from "react-router";
 
-function FeedCarouselItem(){
+function FeedCarouselItem(props){
     const navigate = useNavigate();
+    const {num} = props;
 
     return (
         <div className={"w-full flex flex-col p-8 gap-4 backdrop-blur-xl bg-background-pop/20 rounded-md transition-all duration-200 cursor-pointer"} onClick={() => {navigate("/game-page")}}>
             <div className={"w-full flex flex-row justify-between gap-4"}>
                 <img
-                    src={"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1973530/header.jpg?t=1747619569"}
+                    src={"/games/" + num + ".jpg"}
                     alt={"something"}
                     className={"w-2/3 aspect-video object-cover"}
                 />
